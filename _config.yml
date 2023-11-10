@@ -18,6 +18,12 @@ defaults:
     values:
       layout: "default"
 
+# Markdown settings
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  syntax_highlighter: rouge
+
 plugins:
   - jekyll-feed
   - jekyll-sitemap
