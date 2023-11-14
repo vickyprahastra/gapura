@@ -1,9 +1,9 @@
-<nav class="navbar navbar-expand navbar-light bg-body">
+<nav class="autohide navbar navbar-expand navbar-light bg-body border-bottom">
   <div class="container-fluid">
-    <a class="navbar-brand" href="/">Prahastra</a>
+    <a class="navbar-brand fw-bold" href="/">Prahastra</a>
     <div class="navbar-nav mb-2 mb-lg-0">
       {% for item in site.data.navigation %}
-      <a href="{{ item.link }}" {% if page.url == item.link %}class="nav-link text-primary"{% else %}class="nav-link"{% endif %} aria-current="page">{{ item.name }}</a>
+      <a href="{{ item.link }}" {% if page.url == item.link %}class="nav-link text-dark fw-bold"{% else %}class="nav-link"{% endif %} aria-current="page">{{ item.name }}</a>
       {% endfor %}
     </div>
   </div>
