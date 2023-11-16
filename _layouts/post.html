@@ -5,6 +5,9 @@ layout: default
 
 <p>
   {{ page.date | date_to_string }}
+  <div id="tag-cloud">
+    {{ site | tag_cloud }}
+  </div>
   {% assign author = site.authors | where: 'short_name', page.author | first %}
   {% if author %}
     - <a href="{{ author.url }}">{{ author.name }}</a>
