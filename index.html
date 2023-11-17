@@ -4,7 +4,11 @@ title: Home
 ---
 
 <div class="text-center">
-  <img src="/assets/images/profilepicture.png" class="rounded-circle mx-auto d-block img-fluid mt-5 mb-3" alt="Vicky Prahastra" style="max-width: 120px;">
-  <h1 class="fs-1 fw-bold">John Doe</h1>
-  <h2 class="fs-6"> A Person who travels the world eating nasi goreng </h2>
+  <img src="/assets/images/profilepicture.png" class="rounded-circle mx-auto d-block img-fluid mt-5 mb-3" alt="{{ site.homepage.title }}" style="max-width: 120px;">
+  <h1 class="fs-1 fw-bold pb-3">
+    {{ site.homepage.title }}
+  </h1>
+  <h2 class="fs-6">
+    {{ site.homepage.description }}
+  </h2>
 </div>

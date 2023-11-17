@@ -1,3 +1,12 @@
+meta:
+  title: Gapura Theme
+  description: Gapura Theme
+
+homepage:
+  title: Gapura
+  description: I'm John Doe, a passionate and results-driven software engineer with a deep love for creating innovative solutions to complex problems. Over the past 5 years, I have honed my skills in Ruby on Rails, allowing me to contribute effectively to various stages of the software development lifecycle.
+
+
 collections:
   authors:
     output: true
