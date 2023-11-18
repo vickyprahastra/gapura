@@ -1,3 +1,21 @@
+@font-face {
+  font-family: 'GeneralSans';
+  src: url('../fonts/GeneralSans-Variable.woff2') format('woff2'),
+       url('../fonts/GeneralSans-Variable.woff') format('woff');
+       font-weight: 200 700;
+       font-display: swap;
+       font-style: normal;
+}
+
+@font-face {
+  font-family: 'GeneralSans';
+  src: url('assets/fonts/GeneralSans-VariableItalic.woff2') format('woff2'),
+       url('assets/fonts/GeneralSans-VariableItalic.woff') format('woff');
+       font-weight: 200 700;
+       font-display: swap;
+       font-style: italic;
+}
+
 :root {
   --gapura-blue:    #0d6efd;
   --gapura-indigo:  #6610f2;
@@ -9,6 +27,17 @@
   --gapura-green:   #198754;
   --gapura-teal:    #20c997;
   --gapura-cyan:    #0dcaf0;
+
+  --sans: 'GeneralSans', Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
+  --mono: Menlo, Consolas, Monaco, "Liberation Mono", Lucida Console, monospace;
+}
+
+nav {
+  border-bottom: solid 1px #F2F2F2;
+}
+
+body {
+  font-family: var(--sans);
 }
 
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6, a {
@@ -19,13 +48,9 @@ p, .text-gapura {
   color: #4b4b4b !important;
 }
 
-a:hover {
-  color: var(--color-base) !important;
-}
-
 main.content {
   width: 100%;
-  min-height: 82vh;
+  min-height: 84vh;
 }
 
 .scrolled-down{
@@ -61,7 +86,7 @@ footer.footer {
   // height: 4vh;
   position: relative;
   bottom:0px;
-  padding: 2em 0;
+  padding: 1em 0;
   font-size: 12px;
   color: #6b7886;
 
@@ -69,4 +94,20 @@ footer.footer {
     color: inherit;
     text-decoration-color: #d2c7c7;
   }
+}
+
+.tag-cloud {
+  a {
+    border: 1.5px solid;
+    border-radius: 4px;
+    margin: 1px;
+    padding: 2px;
+    text-decoration: none;
+
+    &:hover {
+      background: var(--color-base);
+      color: #fff !important;
+    }
+  }
+
 }

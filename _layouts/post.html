@@ -9,9 +9,9 @@ layout: default
   {% if author %}
     - <a href="{{ author.url }}">{{ author.name }}</a>
   {% endif %}
-  <div id="tag-cloud">
-    Tags: {{ site | tag_cloud }}
-  </div>
+  <span class="px-2 tag-cloud fs-6">
+    {{ page | tags }}
+  </span>
 </p>
 
 {{ content }}
