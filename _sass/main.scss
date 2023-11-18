@@ -1,3 +1,33 @@
+:root {
+  --gapura-blue:    #0d6efd;
+  --gapura-indigo:  #6610f2;
+  --gapura-purple:  #6f42c1;
+  --gapura-pink:    #d63384;
+  --gapura-red:     #dc3545;
+  --gapura-orange:  #fd7e14;
+  --gapura-yellow:  #ffc107;
+  --gapura-green:   #198754;
+  --gapura-teal:    #20c997;
+  --gapura-cyan:    #0dcaf0;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6, a {
+  color: #2b2b2b !important;
+}
+
+p, .text-gapura {
+  color: #4b4b4b !important;
+}
+
+a:hover {
+  color: var(--color-base) !important;
+}
+
+main.content {
+  width: 100%;
+  min-height: 82vh;
+}
+
 .scrolled-down{
   transform:translateY(-100%); transition: all 0.3s ease-in-out;
 }
@@ -15,6 +45,18 @@
   z-index: 1030;
 }
 
+.social-icon {
+  svg {
+    stroke: #454545;
+  }
+
+  a {
+    :hover {
+      stroke: var(--color-base);
+    }
+  }
+}
+
 footer.footer {
   // height: 4vh;
   position: relative;
@@ -27,9 +69,4 @@ footer.footer {
     color: inherit;
     text-decoration-color: #d2c7c7;
   }
-}
-
-main.content {
-  width: 100%;
-  min-height: 85vh;
 }

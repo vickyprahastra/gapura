@@ -1,11 +1,11 @@
-<div class="social-icon">
-  <ul>
+<div class="social-icon pt-3">
+  <div class="d-flex justify-content-center">
       {% for link in site.homepage.links %}
-        <li>
+        <span class="p-2">
           <a href="{{ link.url }}">
             {% svg "/assets/icons/{{ link.platform }}.svg" %}
             </a>
-        </li>
+        </span>
       {% endfor %}
-  </ul>
+  </div>
 </div>
