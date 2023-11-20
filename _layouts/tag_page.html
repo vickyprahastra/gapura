@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-<h1 class="text-center display-4 my-5 fw-bold">{{ page.tag }}</h1>
+<h1 class="text-center display-4 my-5 fw-bold">{{ page.tag | upcase }}</h1>
 
 <div class="px-2 tag-cloud fs-6 pb-3">
   {% for tag in site.tags %}
