@@ -3,6 +3,8 @@ meta:
   description: Gapura Theme
 
 homepage:
+  favicon_url: "/assets/images/profilepicture.png"
+  profile_picture_url: "/assets/images/profilepicture.png"
   title: Gapura
   description: I'm John Doe, a passionate and results-driven software engineer with a deep love for creating innovative solutions to complex problems. Over the past 5 years, I have honed my skills in Ruby on Rails, allowing me to contribute effectively to various stages of the software development lifecycle.
   links:
@@ -10,6 +12,7 @@ homepage:
     - { platform: twitter, url: "https://twitter.com/7icky" }
     - { platform: linkedin, url: "https://www.linkedin.com/in/lukisan/" }
     - { platform: rss, url: "/feed.xml" }
+base_color: blue
 
 collections:
   authors:
