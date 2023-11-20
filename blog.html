@@ -2,12 +2,12 @@
 layout: default
 title: Blog
 ---
-<h1 class="text-center display-4 my-5 fw-bold">Latest Posts</h1>
+<h1 class="text-center display-5 py-5">Latest Posts</h1>
 
 <div>
   {% for post in site.posts %}
     <div class="my-4">
-      <h2 class="fw-bold"><a class="text-decoration-none" href="{{ post.url }}">{{ post.title }}</a></h2>
+      <h2 class="fw-bold pb-2"><a class="text-decoration-none" href="{{ post.url }}">{{ post.title }}</a></h2>
       {{ post.excerpt }}
     </div>
   {% endfor %}
