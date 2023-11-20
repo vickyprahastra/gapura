@@ -7,7 +7,7 @@ title: Blog
 <div>
   {% for post in site.posts %}
     <div class="my-4">
-      <h2 class="fw-bold pb-2"><a class="text-decoration-none" href="{{ post.url }}">{{ post.title }}</a></h2>
+      <h2 class="fw-bold pb-2"><a href="{{ post.url }}">{{ post.title }}</a></h2>
       {{ post.excerpt }}
     </div>
   {% endfor %}
