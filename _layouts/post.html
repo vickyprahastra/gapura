@@ -1,17 +1,26 @@
 ---
 layout: default
 ---
-<h1 class="text-center display-4 my-5 fw-bold">{{ page.title }}</h1>
+<h1 class="text-center display-5 my-5">{{ page.title }}</h1>
 
-<p>
-  {{ page.date | date_to_string }}
-  {% assign author = site.authors | where: 'short_name', page.author | first %}
-  {% if author %}
-    - <a href="{{ author.url }}">{{ author.name }}</a>
+<div class="pb-5 mb-4">
+  <div class="pb-1 text-secondary float-start fs-6">
+    {{ page.date | date_to_string }}
+    {% assign author = site.authors | where: 'short_name', page.author | first %}
+    {% if author %}
+      - <a href="{{ author.url }}">{{ author.name }}</a>
+    {% endif %}
+  </div>
+  {% if page.tags and page.tags != empty %}
+    <div class="pr-2 tag-cloud fs-6 float-end">
+      {% assign tags = page.tags %}
+      <span itemprop="keywords">
+        {% for tag in tags %}
+        <a class="tag" href="/tag/{{tag | downcase | slugify}}">{{tag | upcase }}</a>{% unless forloop.last %} {% endunless %}
+        {% endfor %}
+      </span>
+    </div>
   {% endif %}
-  <span class="px-2 tag-cloud fs-6">
-    {{ page | tags }}
-  </span>
-</p>
+</div>
 
 {{ content }}

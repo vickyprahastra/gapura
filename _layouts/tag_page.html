@@ -3,12 +3,29 @@ layout: default
 ---
 <h1 class="text-center display-4 my-5 fw-bold">{{ page.tag }}</h1>
 
-<div id="tag-cloud">
-  {{ site | tag_cloud }}
+<div class="px-2 tag-cloud fs-6 pb-3">
+  {% for tag in site.tags %}
+    {% capture name %}{{ tag | first }}{% endcapture %}
+    <a class="tag" href="{{name}}">{{ name | upcase }}</a>
+  {% endfor %}
 </div>
 
 <ul>
   {% for post in page.posts %}
-    <li><a href="{{ post.url }}">{{ post.title }}</a> ({{ post.date | date_to_string }} | Tags: {{ post | tags }})</li>
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+      {{ post.date | date_to_string }} | Tags:
+      {% if post.tags and post.tags != empty %}
+        <span class="pr-2 tag-cloud fs-6">
+          {% assign tags = post.tags %}
+          <span itemprop="keywords">
+            {% for tag in tags %}
+              <a class="tag" href="/tag/{{tag | downcase | slugify}}">{{tag | upcase }}</a>{% unless forloop.last %} {% endunless %}
+            {% endfor %}
+          </span>
+        </span>
+      {% endif %}
+    </li>
+
   {% endfor %}
 </ul>
