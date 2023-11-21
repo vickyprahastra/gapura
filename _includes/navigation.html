@@ -1,9 +1,13 @@
 <nav class="autohide navbar navbar-expand navbar-light bg-body">
   <div class="container-fluid">
     <a class="navbar-brand fw-bold" href="/">{{ site.homepage.title }}</a>
-    <div class="navbar-nav mb-2 mb-lg-0">
+    <div class="navbar-nav mb-lg-0">
       {% for item in site.data.navigation %}
-      <a href="{{ item.link }}" {% if page.url == item.link %}class="nav-link text-dark fw-bold"{% else %}class="nav-link"{% endif %} aria-current="page">{{ item.name }}</a>
+        {% if page.url == item.link %}
+          <span href="{{ item.link }}" class="nav-link text-dark text-decoration-underline fw-bold fs-6" aria-current="page">{{ item.name }}</span>
+        {% else %}
+          <a href="{{ item.link }}" class="nav-link fw-bold fs-6" aria-current="page">{{ item.name }}</a>
+        {% endif %}
       {% endfor %}
     </div>
   </div>
