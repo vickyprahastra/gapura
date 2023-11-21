@@ -2,7 +2,7 @@
   <div class="d-flex justify-content-center">
       {% for link in site.homepage.links %}
         <span class="p-2">
-          <a href="{{ link.url }}">
+          <a href="{{ link.url }}" rel="nofollow" target="_blank">
             {% svg "/assets/icons/{{ link.platform }}.svg" %}
             </a>
         </span>
