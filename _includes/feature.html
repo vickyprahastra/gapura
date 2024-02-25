@@ -1,0 +1,26 @@
+<div class="list-featured">
+  <div class="my-4 fw-bold text-muted">
+    Latest blog post:
+  </div>
+  {% for post in site.posts limit: 5 %}
+    <div class="col-12">
+      <span>
+          <h3 class="font-weight-bold fs-6">
+            <a href="{{site.baseurl}}{{ post.url }}" class="text-dark">{{ post.title | truncate: 40 }}</a>
+            <span class="pr-2 tag-cloud fs-6 float-end">
+              {% assign tags = post.tags %}
+              {% assign categories = post.categories %}
+              <span itemprop="keywords">
+                {% for tag in tags %}
+                  <a class="tag" href="/tag/{{tag | downcase | slugify}}">{{tag | upcase }}</a>{% unless forloop.last %} {% endunless %}
+                {% endfor %}
+              </span>
+            </span>
+          </h3>
+          <!-- <p class="excerpt fs-6 py-2"> -->
+          <!--   {{ post.excerpt | strip_html | strip_newlines | truncate: 136 }} -->
+          <!-- </p> -->
+      </span>
+    </div>
+  {% endfor %}
+</div>
